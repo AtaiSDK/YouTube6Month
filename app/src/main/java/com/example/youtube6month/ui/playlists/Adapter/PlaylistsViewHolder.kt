@@ -19,11 +19,11 @@ class PlaylistViewHolder(
         context: Context,
     ) {
         with(binding) {
-            tvPlaylistName.text = playlistsModelItem.snippet.title // Название плейлиста
-            ivPlaylist.load(playlistsModelItem.snippet.thumbnails.medium.url?: "") // Ссылка на изображение по умолчанию
+            tvPlaylistName.text = playlistsModelItem.snippet.title
+            ivPlaylist.load(playlistsModelItem.snippet.thumbnails.medium.url?: "")
             if (playlistsModelItem.snippet.localized != null) {
                 tvNumberOfVideos.text =
-                    playlistsModelItem.contentDetails.itemCount.toString() + context.getString(R.string.video_series) // Количество видео в плейлисте
+                    playlistsModelItem.contentDetails.itemCount.toString() + context.getString(R.string.video_series)
             } else {
                 tvNumberOfVideos.text = context.getString(R.string._04_00)
                 tvInIvPlaylist.text = ""
