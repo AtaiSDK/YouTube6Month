@@ -14,14 +14,14 @@ class Repository(private val remoteDataSource: RemoteDataSource) {
 
     fun getPlaylist(): LiveData<PagingData<PlaylistsModel.Item>> {
         return Pager(
-            config = PagingConfig(pageSize = 10,),
+            config = PagingConfig(pageSize = 10),
             pagingSourceFactory = { PlaylistsPagingSource(remoteDataSource = remoteDataSource) }
         ).liveData
     }
 
     fun getDetails(playlistId: String): LiveData<PagingData<PlaylistsModel.Item>> {
         return Pager(
-            config = PagingConfig(pageSize = 10,),
+            config = PagingConfig(pageSize = 5),
             pagingSourceFactory = { DetailsPagingSource(
                 remoteDataSource = remoteDataSource,
                 playlistId = playlistId) }

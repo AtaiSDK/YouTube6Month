@@ -32,7 +32,7 @@ class PlayerActivity : BaseActivity<ActivityPlayerBinding, PlayerViewModel>() {
             videoView.addYouTubePlayerListener(
                 object : AbstractYouTubePlayerListener() {
                     override fun onReady(youTubePlayer: YouTubePlayer) {
-                        youTubePlayer.cueVideo(model.contentDetails.videoId ?: "BzVlosMz2mk", 0f)
+                        youTubePlayer.cueVideo(model.contentDetails.videoId ?: "Qn-VRjidiMs", 0f)
                     }
                 }
             )

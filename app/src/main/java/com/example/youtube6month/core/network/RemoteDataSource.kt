@@ -24,7 +24,7 @@ class RemoteDataSource(private val youTubeApiService: YouTubeApiService) : BaseD
             pageToken = nextPageToken,
             part = Constants.PART,
             playlistId = playlistId,
-            maxResults = 10,
+            maxResults = 5,
         )
     }
 }
